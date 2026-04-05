@@ -25,8 +25,8 @@ Kullanıcı kayıt olma ve giriş yapma
 Yetkilendirme (Yalnızca yazı sahibi düzenleyebilir/silebilir)
 🛠️ Kurulum
 #  Projeyi klonlayın:
-git clone <repo-link>
-cd proje-adi
+git clone https://github.com/meleksoydan/blogger.git
+cd blogger
 
 # Gerekli gem’leri yükleyin:
 bundle install
