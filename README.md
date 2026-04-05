@@ -1,24 +1,42 @@
-# README
+Blogger Uygulaması
+Bu proje, Ruby on Rails kullanılarak geliştirilmiş Medium benzeri bir blog uygulamasıdır.
+Kullanıcılar hesap oluşturabilir, yazı yazabilir, yayınlayabilir.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+🚀 Proje Amacı
+Bu uygulamanın amacı:
 
-Things you may want to cover:
+Kullanıcı kimlik doğrulama sistemi oluşturmak
+CRUD işlemlerini uygulamak (Create, Read, Update, Delete)
+Yetkilendirme (Authorization) mantığını kurmak
+Blog yapısını Rails mimarisi ile geliştirmek
+⚙️ Kullanılan Teknolojiler
+Ruby on Rails
+PostgreSQL / SQLite
+HTML, CSS
+Bootstrap veya TailwindCSS
+Devise (Kimlik doğrulama için)
+Active Storage (Görsel yükleme için)
+✨ Özellikler
+Blog ana sayfası (genel / kişisel)
+Kategoriler sayfası
+Profil sayfası
+Blog yazısı oluşturma, düzenleme ve silme
+Kullanıcı kayıt olma ve giriş yapma
+Yetkilendirme (Yalnızca yazı sahibi düzenleyebilir/silebilir)
+🛠️ Kurulum
+#  Projeyi klonlayın:
+git clone <repo-link>
+cd proje-adi
 
-* Ruby version
+# Gerekli gem’leri yükleyin:
+bundle install
 
-* System dependencies
+# Veritabanını oluşturun ve migrate işlemini yapın:
+rails db:create
+rails db:migrate
 
-* Configuration
+# Sunucuyu başlatın
+rails server
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Tarayıcıdan:
+http://localhost:3000 adresine giderek uygulamayı çalıştırabilirsiniz.
