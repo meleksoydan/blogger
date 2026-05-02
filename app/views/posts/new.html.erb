@@ -1,0 +1,38 @@
+<div style="padding: 10px;">
+  
+  <h2 style="color: #b22222; border-bottom: 2px solid #4b2e1e; padding-bottom: 5px;">
+    Yeni Blog Yazısı Ekle
+  </h2>
+
+  <div style="background-color: #fffaf0; border: 1px solid #4b2e1e; padding: 20px; margin-top: 20px;">
+    <%= form_with model: @post do |f| %>
+      
+      <div style="margin-bottom: 15px;">
+        <%= f.label :title, "Yazı Başlığı", style: "display: block; font-weight: bold; color: #4b2e1e;" %>
+        <%= f.text_field :title, style: "width: 100%; padding: 8px; border: 1px solid #b22222;" %>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <%= f.label :body, "İçerik", style: "display: block; font-weight: bold; color: #4b2e1e;" %>
+        <%= f.text_area :body, rows: 5, style: "width: 100%; padding: 8px; border: 1px solid #b22222;" %>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <%= f.label :status, "Durum", style: "display: block; font-weight: bold; color: #4b2e1e;" %>
+        <%= f.select :status, [['Yayınlandı', 'published'], ['Taslak', 'draft']], {}, style: "padding: 5px; border: 1px solid #b22222;" %>
+      </div>
+
+      <div style="margin-bottom: 15px;">
+        <%= f.label :article, "Ek Notlar (Opsiyonel)", style: "display: block; font-weight: bold; color: #4b2e1e;" %>
+        <%= f.text_field :article, style: "width: 100%; padding: 8px; border: 1px solid #b22222;" %>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <%= f.submit "Yazıyı Kaydet", style: "background-color: #b22222; color: white; border: none; padding: 10px 20px; font-weight: bold; cursor: pointer;" %>
+        <a href="<%= posts_path %>" style="margin-left: 15px; color: #0000ff;">İptal Et</a>
+      </div>
+
+    <% end %>
+  </div>
+
+</div>

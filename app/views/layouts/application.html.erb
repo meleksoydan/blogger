@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Melek Soydan Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+
+    <style>
+      body {
+        background-color: #f5f5dc; 
+        color: #4b2e1e;
+        margin: 0;
+        font-family: Tahoma, sans-serif;
+      }
+      .container {
+        width: 80%;
+        margin: 20px auto;
+        background-color: white;
+        border: 2px solid #b22222;
+        padding: 20px;
+        min-height: 500px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <%= render "shared/navbar" %>
+
+    <div class="container">
+      <!-- Okul Bilgisi -->
+      <p style="text-align: right; font-size: 11px; color: #b22222; font-weight: bold; margin: 0 0 10px 0;">
+        Balıkesir Üniversitesi | Bilgisayar Programcılığı
+      </p>
+
+      <%= yield %>
+    </div>
+
+    <footer style="text-align: center; padding: 20px; font-size: 12px;">
+      © 2026 Melek Soydan - Vize Ödevi
+    </footer>
+  </body>
+</html>

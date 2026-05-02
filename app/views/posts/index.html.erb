@@ -1,0 +1,42 @@
+<div style="padding: 5px;">
+  
+  <!-- Başlık -->
+  <div style="border-bottom: 2px solid #b22222; margin-bottom: 20px; padding-bottom: 5px;">
+    <h2 style="color: #4b2e1e; margin: 0; font-family: Tahoma, sans-serif;">Blog Yazıları</h2>
+  </div>
+
+  <!-- Liste -->
+  <% if @posts.any? %>
+    <% @posts.each do |post| %>
+      <div style="background-color: #ffffff; border: 1px solid #4b2e1e; padding: 15px; margin-bottom: 20px;">
+        
+        <h3 style="margin-top: 0;">
+          <a href="<%= post_path(post) %>" style="color: #0000ff; text-decoration: underline;">
+            <%= post.title %>
+          </a>
+        </h3>
+        
+        <p style="color: #333; font-size: 15px;">
+          <%= truncate(post.body, length: 150) %>
+        </p>
+
+        <div style="border-top: 1px dashed #ccc; padding-top: 5px; font-size: 12px; color: #666;">
+          Tarih: <%= post.created_at.strftime("%d.%m.%Y") %>
+          <% if post.respond_to?(:status) && post.status.present? %>
+            | Durum: <%= post.status %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <p style="color: #666;">Henüz yazı eklenmedi.</p>
+  <% end %>
+
+  <!-- Buton -->
+  <div style="margin-top: 30px; text-align: center;">
+    <a href="<%= new_post_path %>" style="background-color: #b22222; color: white; padding: 10px 20px; text-decoration: none; border: 1px solid #4b2e1e; font-weight: bold;">
+      YENİ YAZI EKLE
+    </a>
+  </div>
+
+</div>

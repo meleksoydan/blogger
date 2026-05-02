@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <%# Hoş Geldiniz (Hero) Bölümü %>
+  <div class="p-5 mb-4 bg-body-tertiary rounded-3 shadow">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold text-primary">Blog Uygulamasına Hoş Geldiniz!</h1>
+      <p class="col-md-8 fs- lead">Bu, Ruby on Rails 7 ve Bootstrap 5 kullanarak geliştirdiğim ilk blog projemdir. Burada düşüncelerimi paylaşabilir, yazıları okuyabilir ve profilimi inceleyebilirsiniz.</p>
+      <%= link_to "Son Yazıları Oku", posts_path, class: "btn btn-primary btn-lg px-4 me-md-2" %>
+      <%= link_to "Benimle Tanış", about_path, class: "btn btn-outline-secondary btn-lg px-4" %>
+    </div>
+  </div>
+
+  <%# Öne Çıkanlar (Features) Bölümü %>
+  <div class="row align-items-md-stretch mt-5">
+    <div class="col-md-6 mb-4">
+      <div class="h-100 p-5 text-bg-dark rounded-3 shadow">
+        <h2>Yazılarımı Keşfet</h2>
+        <p>Teknoloji, yazılım dünyası ve günlük yaşam üzerine yazdığım en son makalelere ve düşüncelerime bu bölümden ulaşabilirsiniz.</p>
+        <%= link_to "Tüm Yazılar", posts_path, class: "btn btn-outline-light" %>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="h-100 p-5 bg-body-tertiary border rounded-3 shadow">
+        <h2>Hakkımda Daha Fazlası</h2>
+        <p>Ben Melek. Bilgisayar Programcılığı öğrencisiyim. Bu projenin gelişim sürecini ve yeteneklerimi Hakkımda sayfasında detaylandırdım.</p>
+        <%= link_to "Profilime Git", about_path, class: "btn btn-outline-secondary" %>
+      </div>
+    </div>
+  </div>
+</div>
