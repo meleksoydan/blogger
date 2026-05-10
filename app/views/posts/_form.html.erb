@@ -1,0 +1,5 @@
+<%= form.label :category, class: "form-label" %>
+<%= form.select :category_ids,
+    Category.all.collect { |c| [c.name, c.id] },
+    {},
+    { class: "form-select", multiple: true } %>

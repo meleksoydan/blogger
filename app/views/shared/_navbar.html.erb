@@ -1,15 +1,40 @@
-<div style="background-color: #4b2e1e; padding: 15px; border-bottom: 4px solid #b22222; text-align: center;">
-  <!-- Başlık -->
-  <h1 style="margin: 0; padding-bottom: 10px;">
-    <a href="/" style="color: #ff4d4d; text-decoration: none; font-family: Tahoma, sans-serif; font-size: 28px; font-weight: bold;">
-      MELEK SOYDAN - BLOG
-    </a>
-  </h1>
+<nav class="navbar navbar-expand-lg" style="background-color: #4b2e1e; border-bottom: 4px solid #b22222;">
+  <div class="container-fluid justify-content-center">
+    <div class="text-center w-100">
 
-  <!-- Linkler -->
-  <div style="margin-top: 5px;">
-    <a href="/" style="color: white; text-decoration: none; margin: 0 10px; font-size: 14px;">[ ANASAYFA ]</a>
-    <a href="/about" style="color: white; text-decoration: none; margin: 0 10px; font-size: 14px;">[ HAKKIMDA ]</a>
-    <a href="/projects" style="color: white; text-decoration: none; margin: 0 10px; font-size: 14px;">[ PROJELERİM ]</a>
+      <a class="navbar-brand d-block mb-2" href="/"
+         style="color: #ff4d4d; font-family: Tahoma, sans-serif; font-size: 28px; font-weight: bold;">
+        MELEK SOYDAN - BLOG
+      </a>
+
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="/" class="text-white text-decoration-none" style="font-size: 14px;">[ ANASAYFA ]</a>
+        <a href="/about" class="text-white text-decoration-none" style="font-size: 14px;">[ HAKKIMDA ]</a>
+        <a href="/projects" class="text-white text-decoration-none" style="font-size: 14px;">[ PROJELERİM ]</a>
+
+        <div class="dropdown">
+          <a href="#" class="text-white text-decoration-none dropdown-toggle"
+             style="font-size: 14px;"
+             data-bs-toggle="dropdown">
+            [ İŞLEMLER ]
+          </a>
+          <ul class="dropdown-menu" style="background-color: #3a2010; border: 1px solid #b22222;">
+            <li>
+              <%= link_to "Yeni Post Oluştur", new_post_path,
+                  class: "dropdown-item text-white",
+                  style: "font-size: 13px;" %>
+            </li>
+            <li>
+              <%= link_to "Yeni Kategori Oluştur", new_category_path,
+                  class: "dropdown-item text-white",
+                  style: "font-size: 13px;" %>
+            </li>
+            <li><hr class="dropdown-divider" style="border-color: #b22222;"></li>
+            <li><a class="dropdown-item text-white" href="#" style="font-size: 13px;">Çıkış</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
   </div>
-</div>
+</nav>
