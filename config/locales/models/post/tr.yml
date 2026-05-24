@@ -1,0 +1,19 @@
+tr:
+  activerecord:
+    models:
+      post:
+        one: "Blog Girdisi"
+        other: "Blog Girdileri"
+    attributes:
+      post:
+        title: "Post Başlığı"
+        article: "Post Metni"
+        category: "Kategori"
+        image: "Post Resmi"
+        status: "Post Yayın Durumu"
+    enums:
+      post:
+        statuses:
+          draft: "Taslak"
+          published: "Yayınlandı"
+          inactive: "Yayından kaldırıldı"

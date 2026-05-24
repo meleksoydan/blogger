@@ -1,0 +1,7 @@
+tr:
+  shared:
+    footer:
+      home: "Anasayfa"
+      projects: "Projelerim"
+      categories: "Kategoriler"
+      about: "Hakkımda"

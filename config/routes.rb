@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  resources :categories
-  get "about", to: "home#about"
- get "projects", to: "home#projects"
+  # Statik sayfalar ve kök dizin her zaman en üstte veya düzenli olmalı
   root "home#index"
-  get "about", to: "home#about"
+  
+  get "about", to: "pages#about", as: :about
+  get "projects", to: "home#projects", as: :projects
 
+  resources :categories
   resources :posts
-  get "projects", to: "home#projects"
 end

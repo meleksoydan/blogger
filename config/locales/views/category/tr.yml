@@ -1,0 +1,10 @@
+tr:
+  categories:
+    index:
+      title: "Kategoriler"
+      show_link: "Bu kategoriyi görüntüle"
+      new_link: "Yeni kategori"
+    edit:
+      title: "Kategori Güncelle"
+    new:
+      title: "Yeni Kategori"

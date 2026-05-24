@@ -1,0 +1,10 @@
+en:
+  categories:
+    index:
+      title: Categories
+      show_link: Show
+      new_link: New Category
+    edit:
+      title: Update Category
+    new:
+      title: New Category

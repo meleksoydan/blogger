@@ -1,5 +1,27 @@
-<%= form.label :category, class: "form-label" %>
-<%= form.select :category_ids,
-    Category.all.collect { |c| [c.name, c.id] },
-    {},
-    { class: "form-select", multiple: true } %>
+<%= form_with model: post do |form| %>
+  <div class="mb-3">
+    <%= form.label :title, class: "form-label" %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :article, class: "form-label" %>
+    <%= form.rich_text_area :article, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :category_ids, class: "form-label" %>
+    <%= form.select :category_ids,
+                    Category.all.collect { |c| [c.name, c.id] },
+                    {},
+                    { class: "form-select", multiple: true } %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :status, class: "form-label" %>
+    <%= form.select :status, Post.statuses.keys, {}, { class: "form-select" } %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :image, class: "form-label" %>
+    <%= form.file_field :image, class: "form-control" %>
+  </div>
+  <%= form.submit class: "btn btn-primary" %>
+<% end %>
+

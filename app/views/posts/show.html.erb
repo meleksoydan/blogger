@@ -1,5 +1,21 @@
-<% @post.categories.each do |category| %>
-  
-    <%= category.name %>
-  
+
+<% if @post.image.attached? %>
+  <div class="post-image" style="margin-bottom: 20px;">
+    <%= image_tag @post.image, style: "max-width: 100%; height: auto; border-radius: 8px;" %>
+  </div>
 <% end %>
+
+
+<div class="post-categories" style="margin-bottom: 15px;">
+  <strong>Kategoriler:</strong>
+  <% @post.categories.each_with_index do |category, index| %>
+    <%= category.name %><%= ", " unless index == @post.categories.size - 1 %>
+  <% end %>
+</div>
+
+
+<div class="post-actions" style="margin-top: 20px;">
+  <%= link_to t("actions.back"), posts_path, class: "btn btn-secondary me-1" %>
+  <%= link_to t("actions.edit"), edit_post_path(@post), class: "btn btn-warning" %>
+  <%= button_to t("actions.destroy"), @post, method: :delete, data: { turbo_confirm: "Emin misin?" }, class: "btn btn-danger", style: "display: inline-block;" %>
+</div>

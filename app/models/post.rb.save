@@ -1,14 +1,15 @@
 
 class Post < ApplicationRecord
- extend FriendlyId
-friendly_id :title, use: :slugged
+ 
+  extend FriendlyId [cite: 241]
+  friendly_id :title, use: :slugged [cite: 243]
 
 
   has_and_belongs_to_many :categories
   has_one_attached :image
   
  
-  has_rich_text :article
+  has_rich_text :article [cite: 272]
 
   enum :status, {
     draft: 0,
@@ -24,3 +25,6 @@ friendly_id :title, use: :slugged
                     
   validates :article, presence: { message: "Post içeriği boş bırakılamaz." }
 end
+extend FriendlyId
+friendly_id :title, use: :slugged
+

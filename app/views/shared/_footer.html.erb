@@ -1,0 +1,21 @@
+<footer class="text-center py-4">
+  <ul class="nav justify-content-center mb-3">
+    <li class="nav-item">
+      <%= link_to t(".home"), root_path, class: "nav-link px-2 text-body-secondary" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to t(".projects"), projects_path, class: "nav-link px-2 text-body-secondary" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to t(".categories"), categories_path, class: "nav-link px-2 text-body-secondary" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to t(".about"), about_path, class: "nav-link px-2 text-body-secondary" %>
+    </li>
+  </ul>
+  <div class="text-center mb-3">
+    <%= link_to url_for(locale: :tr) do %>🇹🇷<% end %>
+    <%= link_to url_for(locale: :en) do %>🇬🇧<% end %>
+  </div>
+  <p class="text-body-secondary">© 2026 Melek Soydan</p>
+</footer>
